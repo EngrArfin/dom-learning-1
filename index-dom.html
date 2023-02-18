@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+
+    <script>
+  const calculateButton = document.getElementById('calculate-button');
+  calculateButton.addEventListener('click', () => {
+    const sideLength = parseFloat(document.getElementById('side-length').value);
+    const area = sideLength ** 2;
+    document.getElementById('result').textContent = `Area: ${area}`;
+  });
+</script>
+</head>
+<body>
+    <header>
+        <form>
+            <label for="side-length">Height.:</label>
+            <input type="number" id="side-length" name="side-length"> <br> <br>
+            <label for="side-length">Weight:</label>
+            <input type="number" id="side-length" name="side-length"> <br> <br>
+            <button type="button" id="calculate-button">Calculate Area</button>
+          </form>
+          <p id="result"></p>
+    </header>
+</body>
+</html>
